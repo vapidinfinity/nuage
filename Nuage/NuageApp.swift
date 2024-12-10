@@ -145,7 +145,7 @@ struct NuageApp: App {
     @State private var subscriptions = Set<AnyCancellable>()
     
     var body: some Scene {
-        WindowGroup {
+        Window("Nuage", id: "main") {
             if loggedIn {
                 MainView()
                     .frame(minWidth: 800, minHeight: 400)
